@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Stadistics of OpenSmartBand
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-buttons end>
+    <button (click) = "test()" >SYNC</button>
+  </ion-buttons> -->
+  <button ion-button primary (click) = "readAll()" >SYNC</button>
+
+    <ion-card class="temperature">
+      <ion-card-header class="color-white">
+        <ion-icon name="medkit"></ion-icon>
+        TEMPERATURA
+      </ion-card-header>
+      <ion-card-content class="color-white">
+        <span> {{currentTemperature}} </span>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="pulse">
+      <ion-card-header class="color-white">
+        <ion-icon name="pulse"></ion-icon>
+        Pulso
+      </ion-card-header>
+      <ion-card-content class="color-white">
+        <span> {{currentPulse}} </span>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="step">
+      <ion-card-header class="color-white">
+        <ion-icon name="walk"></ion-icon>
+        Pasos
+      </ion-card-header>
+      <ion-card-content class="color-white">
+        <span> {{currentStep}} </span>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card>
+      <ion-card-header>
+        Temperaturas
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Pasos
+        <span> {{objectString}} </span>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+
+    <!-- <ion-card>
+      <ion-card-header>
+        Doughnut Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card> -->
+
+
+</ion-content>
